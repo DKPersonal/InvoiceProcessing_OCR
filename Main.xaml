@@ -172,13 +172,13 @@
               <av:Size x:Key="ShapeSize">200,52.8</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="894.4,7209.6" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[mails]">
+          <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="894.4,7400" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[mails]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="snm:MailMessage">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="mail" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="859.2,7084" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="859.2,7274.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="si:FileInfo[]" Name="FolderPath" />
                     <Variable x:TypeArguments="x:String" Name="FileAlreadyExist" />
@@ -680,7 +680,18 @@
                   </If>
                   <ui:MoveFolderX DisplayName="Move Folder" From="[&quot;D:\UiPath\InvoiceProcessing_OCR\Email_with_attachments_&quot;  +Now.ToString(&quot;ddMMyyyy&quot;)]" sap:VirtualizedContainerService.HintSize="796.8,160" sap2010:WorkflowViewState.IdRef="MoveFolderX_1" Overwrite="True" To="[&quot;D:\UiPath\InvoiceProcessing_OCR\Archive_EmailFolder\Email_with_attachments_&quot;+Now.ToString(&quot;ddMMyyyy_HHmmss&quot;)]" />
                   <ui:MoveFolderX DisplayName="Move Folder" From="[&quot;D:\UiPath\InvoiceProcessing_OCR\Email_with_attachments_containing_mail_subject_content_&quot;  +Now.ToString(&quot;ddMMyyyy&quot;)]" sap:VirtualizedContainerService.HintSize="796.8,160" sap2010:WorkflowViewState.IdRef="MoveFolderX_2" Overwrite="True" To="[&quot;D:\UiPath\InvoiceProcessing_OCR\Archive_EmailFolder\Email_with_attachments_containing_mail_subject_content_&quot;+Now.ToString(&quot;ddMMyyyy_HHmmss&quot;)]" />
-                  <ui:MoveFolderX DisplayName="Move Folder" From="[&quot;D:\UiPath\InvoiceProcessing_OCR\Email_with_no_attachments_&quot;  +Now.ToString(&quot;ddMMyyyy&quot;)]" sap:VirtualizedContainerService.HintSize="796.8,160" sap2010:WorkflowViewState.IdRef="MoveFolderX_3" Overwrite="True" To="[&quot;D:\UiPath\InvoiceProcessing_OCR\Archive_EmailFolder\Email_with_no_attachments_&quot;+Now.ToString(&quot;ddMMyyyy_HHmmss&quot;)]" />
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="796.8,350.4" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,272" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MoveFolderX DisplayName="Move Folder" From="[&quot;D:\UiPath\InvoiceProcessing_OCR\Email_with_no_attachments_&quot;  +Now.ToString(&quot;ddMMyyyy&quot;)]" sap:VirtualizedContainerService.HintSize="387.2,160" sap2010:WorkflowViewState.IdRef="MoveFolderX_3" Overwrite="True" To="[&quot;D:\UiPath\InvoiceProcessing_OCR\Archive_EmailFolder\Email_with_no_attachments_&quot;+Now.ToString(&quot;ddMMyyyy_HHmmss&quot;)]" />
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
                 </Sequence>
               </ActivityAction>
             </ui:ForEach.Body>
