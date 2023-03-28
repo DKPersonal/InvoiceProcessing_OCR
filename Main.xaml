@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="EmailAutomationUpdate" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="797.6,701.6" sap2010:WorkflowViewState.IdRef="EmailAutomationUpdate_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="EmailAutomationUpdate" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="808,701.6" sap2010:WorkflowViewState.IdRef="EmailAutomationUpdate_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="90">
       <x:String>System.Activities</x:String>
@@ -147,9 +147,9 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID2">
+    <FlowStep x:Name="__ReferenceID3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">189.2,117.6</av:Point>
@@ -173,13 +173,13 @@
               <av:PointCollection x:Key="ConnectorLocation">289.2,245.2 289.2,275.2 280,275.2 280,313.6</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="894.4,5944.8" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[mails]">
+          <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[mails]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="snm:MailMessage">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="mail" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="859.2,5820" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="859.2,6082.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="si:FileInfo[]" Name="FolderPath" />
                     <Variable x:TypeArguments="x:String" Name="FileAlreadyExist" />
@@ -190,9 +190,9 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[mail.Attachments.Count &gt;= 1]" sap:VirtualizedContainerService.HintSize="796.8,5708" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[mail.Attachments.Count &gt;= 1]" sap:VirtualizedContainerService.HintSize="796.8,5970.4" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="763.2,5468.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <Sequence sap:VirtualizedContainerService.HintSize="763.2,5731.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="emailSub" />
                           <Variable x:TypeArguments="x:Boolean" Name="FileExistsupdate" />
@@ -205,7 +205,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign DisplayName="Assign" sap:VirtualizedContainerService.HintSize="720,80.8" sap2010:WorkflowViewState.IdRef="Assign_10">
+                        <Assign DisplayName="Assign" sap:VirtualizedContainerService.HintSize="720,81.6" sap2010:WorkflowViewState.IdRef="Assign_10">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[mailCondition]</OutArgument>
                           </Assign.To>
@@ -213,9 +213,9 @@
                             <InArgument x:TypeArguments="x:String">[mail.Subject]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <If Condition="[mailCondition.StartsWith(&quot;Invoice #&quot;)]" sap:VirtualizedContainerService.HintSize="720,5258.4" sap2010:WorkflowViewState.IdRef="If_8">
+                        <If Condition="[mailCondition.StartsWith(&quot;Invoice #&quot;)]" sap:VirtualizedContainerService.HintSize="720,5520" sap2010:WorkflowViewState.IdRef="If_8">
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="686.4,5015.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                            <Sequence sap:VirtualizedContainerService.HintSize="686.4,5276.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="s:String[]" Name="AllFiles" />
                                 <Variable x:TypeArguments="sd2:DataTable" Name="ExcelData" />
@@ -383,8 +383,10 @@
                                 </If.Else>
                               </If>
                               <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Save Attachments" ExcludeInlineAttachments="False" Filter=".*(.png|.pdf|.jpg)" FolderPath="[&quot;EmailAttachmentsFolder\Email_with_attachments_&quot; + Now.ToString(&quot;ddMMyyyy&quot;) + &quot;\&quot; + emailSub + ProjectName]" sap:VirtualizedContainerService.HintSize="643.2,88" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_8" Message="[mail]" OverwriteExisting="False" />
+                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="643.2,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="Saved Successfully" />
                               <ui:SaveMail DisplayName="Save Mail Message" FilePath="[&quot;EmailAttachmentsFolder\Email_with_attachments_containing_mail_subject_content_&quot; + Now.ToString(&quot;ddMMyyyy&quot;) + &quot;\&quot; + emailSub + ProjectName+ &quot;.eml&quot;]" sap:VirtualizedContainerService.HintSize="643.2,88" sap2010:WorkflowViewState.IdRef="SaveMail_7" MailMessage="[mail]" />
-                              <Sequence DisplayName="Extract a pdf data to excel sheet" sap:VirtualizedContainerService.HintSize="643.2,3108.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="643.2,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="Saved Sucessfully" />
+                              <Sequence DisplayName="Extract a pdf data to excel sheet" sap:VirtualizedContainerService.HintSize="643.2,3109.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:String" Name="FilesValue" />
                                   <Variable x:TypeArguments="s:String[]" Name="PathVar" />
@@ -395,7 +397,7 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="580.8,80.8" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                <Assign sap:VirtualizedContainerService.HintSize="580.8,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="s:String[]">[PathVar]</OutArgument>
                                   </Assign.To>
@@ -424,7 +426,7 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                         <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="483.2,90.4" sap2010:WorkflowViewState.IdRef="Delay_13" />
                                         <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="[file.ToString]" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
-                                        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'msedge.exe Invoice1.pdf'" sap:VirtualizedContainerService.HintSize="483.2,1892" sap2010:WorkflowViewState.IdRef="WindowScope_6" InformativeScreenshot="246160e1a450c1a553cabb85137afcec" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Invoice*.pdf - Profile 1 - Microsoft​ Edge' /&gt;">
+                                        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'msedge.exe Invoice1.pdf'" sap:VirtualizedContainerService.HintSize="483.2,1892" sap2010:WorkflowViewState.IdRef="WindowScope_6" InformativeScreenshot="dc8ab06e2746532029c0f32d31d4590c" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Invoice*.pdf - Profile 1 - Microsoft​ Edge' /&gt;">
                                           <ui:WindowScope.Body>
                                             <ActivityAction x:TypeArguments="x:Object">
                                               <ActivityAction.Argument>
@@ -491,13 +493,13 @@
                                                     </ui:Target>
                                                   </ui:SendHotkey.Target>
                                                 </ui:SendHotkey>
-                                                <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'InvoiceNumbers'" sap:VirtualizedContainerService.HintSize="387.2,172" sap2010:WorkflowViewState.IdRef="GetOCRText_50">
+                                                <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'InvoiceNumbers'" sap:VirtualizedContainerService.HintSize="387.2,172" sap2010:WorkflowViewState.IdRef="GetOCRText_55">
                                                   <ui:GetOCRText.OCREngine>
                                                     <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
                                                       <ActivityFunc.Argument>
                                                         <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
                                                       </ActivityFunc.Argument>
-                                                      <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="GoogleOCR_37" Image="[Image]" Profile="None" Scale="2" />
+                                                      <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="GoogleOCR_42" Image="[Image]" Profile="None" Scale="2" />
                                                     </ActivityFunc>
                                                   </ui:GetOCRText.OCREngine>
                                                   <ui:GetOCRText.Target>
@@ -553,9 +555,9 @@
                                                     </ActivityFunc>
                                                   </ui:GetOCRText.OCREngine>
                                                   <ui:GetOCRText.Target>
-                                                    <ui:Target Element="{x:Null}" Id="e7ce1b33-c8f5-4bdc-b08a-bcae5c8360ee" InformativeScreenshot="731be58aee6f020f7f1a840e5f2d92f1" Selector="&lt;ctrl name='Invoice*.pdf - Microsoft Edge' role='pane' /&gt;&lt;ctrl idx='85' role='pane' /&gt;">
+                                                    <ui:Target Element="{x:Null}" Id="e7ce1b33-c8f5-4bdc-b08a-bcae5c8360ee" InformativeScreenshot="7d8ccdef0da39cea53be2aa3c06cc269" Selector="&lt;ctrl name='Invoice*.pdf - Microsoft Edge' role='pane' /&gt;&lt;ctrl idx='88' role='pane' /&gt;">
                                                       <ui:Target.ClippingRegion>
-                                                        <ui:Region Rectangle="899, 234, 58, 18" />
+                                                        <ui:Region Rectangle="898, 236, 60, 15" />
                                                       </ui:Target.ClippingRegion>
                                                       <ui:Target.TimeoutMS>
                                                         <InArgument x:TypeArguments="x:Int32" />
@@ -658,9 +660,10 @@
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">180,313.6</av:Point>
                   <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">280,366.40000000000003 280,393.6</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MoveFolderX DisplayName="Move Folder" From="D:\UiPath\InvoiceProcessing_OCR\EmailAttachmentsFolder" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="MoveFolderX_4" Overwrite="False" To="D:\UiPath\InvoiceProcessing_OCR\Archive_Folder">
+              <ui:MoveFolderX DisplayName="Move Folder" From="C:\Users\Dinesh\.nuget\packages\invoiceprocessing_ocr_latest\1.0.16\content\EmailAttachmentsFolder" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="MoveFolderX_6" Overwrite="True" To="D:\UiPath\InvoiceProcessing_OCR\Archive_Folder">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -668,6 +671,24 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:MoveFolderX>
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">180,393.6</av:Point>
+                      <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MoveFolderX DisplayName="Move Folder" From="C:\Users\Dinesh\.nuget\packages\invoiceprocessing_ocr_latest\1.0.16\content\EmailNoAttachmentFolder" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="MoveFolderX_7" Overwrite="True" To="D:\UiPath\InvoiceProcessing_OCR\Archive_Folder">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:MoveFolderX>
+                </FlowStep>
+              </FlowStep.Next>
             </FlowStep>
           </FlowStep.Next>
         </FlowStep>
@@ -675,5 +696,6 @@
     </FlowStep>
     <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
   </Flowchart>
 </Activity>
