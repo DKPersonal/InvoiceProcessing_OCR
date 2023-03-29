@@ -1,0 +1,36 @@
+MIME-Version: 1.0
+Date: Wed, 15 Mar 2023 16:30:04 +0530
+Message-ID: <CAOqe1eq6TOQBw8jmjZ+2_HcSjyvu5r5YubvpNOiV+sQ_sbDNPw@mail.gmail.com>
+Subject: Invoice #
+From: email test <11emailtest11@gmail.com>
+To: email test <11emailtest11@gmail.com>
+Uid: 55
+Folder: INBOX
+Sender: email test <11emailtest11@gmail.com>
+PlainText: Hi buddy, Hello, Dudu.
+HtmlBody: <div dir="ltr">Hi
+ =?utf-8?q?buddy=2C=3Cbr=3E=3Cbr=3E=3Cdiv=3E=C2=A0Hello=2C?= Dudu.</div></div>
+Content-Type: multipart/alternative; boundary="=-iTJVoFa0X0rzDknBVNfeBw=="
+
+--=-iTJVoFa0X0rzDknBVNfeBw==
+Content-Type: text/plain; charset=us-ascii
+
+Hi buddy,
+
+ Hello, Dudu.
+
+--=-iTJVoFa0X0rzDknBVNfeBw==
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: base64
+Content-Id: <b4f986ca-450f-4d88-8ce7-78c4f3da70a0>
+
+SGkgYnVkZHksDQoNCiBIZWxsbywgRHVkdS4NCg==
+
+--=-iTJVoFa0X0rzDknBVNfeBw==
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <143848b0-1663-44f5-a2ba-8783b35298de>
+
+<div dir=3D"ltr">Hi buddy,<br><br><div>=C2=A0Hello, Dudu.</div></div>
+
+--=-iTJVoFa0X0rzDknBVNfeBw==--
